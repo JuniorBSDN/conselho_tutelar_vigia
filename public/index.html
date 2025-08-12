@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conselho Tutelar - Proteção à Criança e Adolescente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .emergency-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/ecdt-logo-saida/e7784aa88a356ea4f3b1286e7bb48b12b5729ec99e0e456cf1be4e1db030e827/PREFEITURA-MUNICIPAL-DE-VIGIA-DE-NAZARE.webp" alt="Logo Prefeitura Municipal de Vigia de Nazaré" class="w-24 md:w-32 lg:w-48">
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-blue-600 font-medium">Início</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">Sobre</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600">Serviços</a>
+                <a href="#report" class="text-gray-600 hover:text-blue-600">Denúncias</a>
+                <a href="#support" class="text-gray-600 hover:text-blue-600">Apoio Legal</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contato</a>
+            </nav>
+            <button id="menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <nav class="flex flex-col items-center space-y-2">
+                <a href="#home" class="block w-full text-center py-2 text-blue-600 font-medium hover:bg-gray-100">Início</a>
+                <a href="#about" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Sobre</a>
+                <a href="#services" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Serviços</a>
+                <a href="#report" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Denúncias</a>
+                <a href="#support" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Apoio Legal</a>
+                <a href="#contact" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Protegendo Nossas Crianças e Adolescentes</h1>
+                <p class="text-xl mb-8">O Conselho Tutelar está aqui para garantir os direitos fundamentais de crianças e adolescentes conforme o Estatuto da Criança e do Adolescente (ECA).</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#report" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-exclamation-triangle mr-2"></i> Fazer Denúncia
+                    </a>
+                    <a href="tel:100" class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-red-700 transition duration-300 emergency-btn">
+                        <i class="fas fa-phone-alt mr-2"></i> Disque 100 (Emergência)
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://www.bozano.rs.gov.br/admin/globalarq/noticia/noticia/651_366/1a50d6852ea7ee1a98596383e61f76e3.png" alt="Ilustração de proteção a crianças e adolescentes" class="w-full max-w-sm">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Sobre o Conselho Tutelar</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Nossa Missão</h3>
+                    <p class="text-gray-600">Zelar pelos direitos das crianças e adolescentes, aplicando medidas de proteção quando esses direitos forem ameaçados ou violados.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Base Legal</h3>
+                    <p class="text-gray-600">Atuamos com base no Estatuto da Criança e do Adolescente (ECA - Lei 8.069/90), que estabelece direitos e deveres para proteção integral.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Composição</h3>
+                    <p class="text-gray-600">Formado por 5 membros eleitos pela comunidade para mandato de 4 anos, com atuação autônoma e independente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Serviços</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Acolhimento Institucional</h3>
+                    <p class="text-gray-600">Medida protetiva para crianças e adolescentes em situação de risco, oferecendo moradia temporária e acompanhamento psicossocial.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Orientação Familiar</h3>
+                    <p class="text-gray-600">Acompanhamento e orientação às famílias para fortalecimento de vínculos e superação de vulnerabilidades.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Encaminhamento Jurídico</h3>
+                    <p class="text-gray-600">Encaminhamento para órgãos competentes em casos que necessitem de intervenção judicial ou medidas socioeducativas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Inclusão Educacional</h3>
+                    <p class="text-gray-600">Garantia de acesso e permanência na escola, combatendo a evasão escolar e promovendo o direito à educação.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Acesso à Saúde</h3>
+                    <p class="text-gray-600">Garantia de atendimento médico, psicológico e odontológico para crianças e adolescentes em situação de vulnerabilidade.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Programas Sociais</h3>
+                    <p class="text-gray-600">Inserção em programas de transferência de renda, cursos profissionalizantes e atividades culturais e esportivas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="support" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Apoio Legal</h2>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-blue-600 p-8 text-white flex flex-col justify-center">
+                        <div class="text-5xl mb-6">
+                            <i class="fas fa-balance-scale-left"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Estatuto da Criança e do Adolescente</h3>
+                        <p>Lei nº 8.069/90 que estabelece os direitos fundamentais e medidas protetivas para crianças e adolescentes.</p>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-xl font-semibold mb-4 text-gray-800">Principais Artigos Relevantes:</h4>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-200 pl-4">
+                                <p class="font-medium text-gray-800">Art. 5°</p>
+                                <p class="text-gray-600">Nenhuma criança ou adolescente será objeto de qualquer forma de negligência, discriminação, exploração, violência, crueldade e opressão.</p>
+                            </div>
+                            <div class="border-l-4 border-blue-200 pl-4">
+                                <p class="font-medium text-gray-800">Art. 18</p>
+                                <p class="text-gray-600">É dever de todos velar pela dignidade da criança e do adolescente, pondo-os a salvo de qualquer tratamento desumano, violento, aterrorizante, vexatório ou constrangedor.</p>
+                            </div>
+                            <div class="border-l-4 border-blue-200 pl-4">
+                                <p class="font-medium text-gray-800">Art. 70</p>
+                                <p class="text-gray-600">É dever de todos prevenir a ocorrência de ameaça ou violação dos direitos da criança e do adolescente.</p>
+                            </div>
+                            <div class="border-l-4 border-blue-200 pl-4">
+                                <p class="font-medium text-gray-800">Art. 98</p>
+                                <p class="text-gray-600">As medidas de proteção à criança e ao adolescente são aplicáveis sempre que os direitos reconhecidos nesta Lei forem ameaçados ou violados.</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="http://www.planalto.gov.br/ccivil_03/leis/l8069.htm" class="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt mr-2"></i> Acesse o ECA completo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Perguntas Frequentes</h3>
+                    <div class="space-y-4">
+                        <div class="border-b pb-4">
+                            <h4 class="font-medium text-gray-800">A denúncia pode ser anônima?</h4>
+                            <p class="text-gray-600 mt-1">Sim, todas as denúncias podem ser feitas de forma anônima. Sua identidade será preservada se você desejar.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h4 class="font-medium text-gray-800">O que acontece após a denúncia?</h4>
+                            <p class="text-gray-600 mt-1">O Conselho Tutelar apura os fatos e toma as medidas necessárias, que podem incluir orientação, encaminhamento a serviços ou medidas protetivas.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h4 class="font-medium text-gray-800">Posso ser processado por denunciar?</h4>
+                            <p class="text-gray-600 mt-1">Não, desde que a denúncia seja feita de boa-fé. O artigo 18 do ECA protege quem denuncia violações de direitos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Parceiros Jurídicos</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-gavel text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Defensoria Pública</h4>
+                                <p class="text-gray-600 mt-1">Atendimento jurídico gratuito para famílias em situação de vulnerabilidade.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-landmark text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Ministério Público</h4>
+                                <p class="text-gray-600 mt-1">Fiscaliza o cumprimento do ECA e pode acionar o judiciário quando necessário.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-hands-helping text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Organizações Não-Governamentais</h4>
+                                <p class="text-gray-600 mt-1">Oferecem apoio psicossocial, assistência e acompanhamento de casos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contato e Localização</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Entre em Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Endereço</h4>
+                                <p class="text-gray-600">Tv. São Sebastião, 112 - Arapiranga<br>CEP: 68780-000 - Vigia/PA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Telefones</h4>
+                                <p class="text-gray-600">(91) XXXX-XXXX (Fixo)<br><a href="https://wa.me/5591983252639" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">(91) 98325-2639 (WhatsApp)</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">E-mail</h4>
+                                <p class="text-gray-600">conselhotutelar@vigia.pa.gov.br</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Atendimento</h4>
+                                <p class="text-gray-600">Segunda a Sexta: 8h às 18h<br>Plantão 24h para emergências</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Endereço no Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.579469074092!2d-48.136274049999995!3d-0.8524495999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a343a4e9b72a85%3A0xe5a1b3c9c9b72b3!2sTv.%20S%C3%A3o%20Sebasti%C3%A3o%2C%20112%20-%20Arapiranga%2C%20Vigia%20-%20PA%2C%2068780-000!5e0!3m2!1spt-BR!2sbr!4v1701388888888!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Conselho Tutelar</h3>
+                    <p class="text-gray-300">Órgão autônomo e não jurisdicional encarregado pela sociedade de zelar pelo cumprimento dos direitos da criança e do adolescente.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.gov.br/mdh/pt-br/sdh" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">Ministério da Mulher, Família e Direitos Humanos</a></li>
+                        <li><a href="https://www.gov.br/mdh/pt-br/conselhos/conanda" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">Conselho Nacional dos Direitos da Criança e do Adolescente</a></li>
+                        <li><a href="http://www.planalto.gov.br/ccivil_03/leis/l8069.htm" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">Estatuto da Criança e do Adolescente</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Denúncias</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300"><i class="fas fa-phone-alt mr-2"></i> Disque 100</li>
+                        <li class="text-gray-300"><i class="fas fa-globe mr-2"></i> <a href="https://www.gov.br/mdh/pt-br/disque100" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">disque100.gov.br</a></li>
+                        <li class="text-gray-300"><i class="fas fa-mobile-alt mr-2"></i> Aplicativo Proteja Brasil</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Back Informática</h3>
+                    <p class="text-gray-300">"Soluções Tecnológicas para todos"</p>
+                    <p class="text-gray-300">Suporte: <a href="https://wa.me/5591983252639" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">91 98325-2639</a></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Conselho Tutelar - Todos os direitos reservados</p>
+                <p class="mt-2 text-sm">Desenvolvido para proteção de crianças e adolescentes</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#report" class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition duration-300">
+            <i class="fas fa-exclamation-triangle text-2xl"></i>
+        </a>
+    </div>
+
+
+</body>
+
+</html>
