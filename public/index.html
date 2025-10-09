@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conselho Tutelar - Proteção à Criança e Adolescente</title>
+    <title>Conselho Tutelar de Vigia- Proteção à Criança e Adolescente</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -93,20 +93,55 @@
             <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-up" data-aos-duration="1000">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">Protegendo Nossas Crianças e Adolescentes</h1>
                 <p class="text-xl mb-8">O Conselho Tutelar está aqui para garantir os direitos fundamentais de crianças e adolescentes conforme o Estatuto da Criança e do Adolescente (ECA).</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://ctvgiadenuncia.vercel.app/"
-                        class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition duration-300">
-                        <i class="fas fa-exclamation-triangle mr-2"></i> Fazer Denúncia
-                    </a>
-                    <a href="tel:100"
-                        class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-red-700 transition duration-300 animate-pulse-custom">
-                        <i class="fas fa-phone-alt mr-2"></i> Disque 100 (Emergência)
-                    </a>
-                </div>
+
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+  <!-- Botão FAZER DENÚNCIA com alerta -->
+  <button
+    onclick="confirmarDenuncia()"
+    class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition duration-300">
+    <i class="fas fa-exclamation-triangle mr-2"></i> Fazer Denúncia
+  </button>
+
+  <!-- Botão DISQUE 100 -->
+  <a href="tel:100"
+    class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-red-700 transition duration-300 animate-pulse-custom">
+    <i class="fas fa-phone-alt mr-2"></i> Disque 100 (Emergência)
+  </a>
+
+  <!-- Botão BAIXAR APP -->
+  <a href="https://seu-link-de-download.com" target="_blank"
+    class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-green-700 transition duration-300">
+    <i class="fas fa-mobile-alt mr-2"></i> Baixar o App
+  </a>
+</div>
+
+<!-- Script do alerta -->
+<script>
+  function confirmarDenuncia() {
+    const aviso = `
+⚠️ ATENÇÃO
+
+Antes de prosseguir, saiba que:
+Fazer uma denúncia falsa é CRIME previsto no Art. 340 do Código Penal Brasileiro.
+
+🚨 Denuncie apenas situações reais de violação dos direitos da criança e do adolescente.
+
+Deseja continuar e fazer sua denúncia?`;
+
+    if (confirm(aviso)) {
+      // Se o usuário confirmar, abre o link da denúncia
+      window.location.href = "https://ctvgiadenuncia.vercel.app/";
+    }
+  }
+</script>
+
+
             </div>
+
             <div class="md:w-1/2 flex justify-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                 <img src="https://www.bozano.rs.gov.br/admin/globalarq/noticia/noticia/651_366/1a50d6852ea7ee1a98596383e61f76e3.png" alt="Ilustração de proteção a crianças e adolescentes" class="w-full max-w-sm">
             </div>
+
         </div>
     </section>
 
@@ -361,8 +396,14 @@
                                 <p class="text-gray-600">Segunda a Sexta: 8h às 18h<br>Plantão 24h para emergências</p>
                             </div>
                         </div>
+                        <br>
+                        <a href="apoio.html"
+   class="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 flex items-center justify-center">
+    <i class="fas fa-paper-plane mr-2"></i> Locais de Apoio
+</a>
                     </div>
                 </div>
+
                 <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-left">
                     <h3 class="text-xl font-semibold mb-6 text-gray-800">Endereço no Mapa</h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d912.9349020494491!2d-48.14183019593056!3d-0.8467058750001819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwNTEnMTAuNCJTIDQ4wrAwOCczNy4xIlc!5e1!3m2!1spt-BR!2sbr!4v1756991215509!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -388,7 +429,16 @@
                         ECA (Lei n.º 8.069/1990) — remete à norma que estabelece a responsabilidade
                         compartilhada de garantir os direitos da criança e do adolescente
                     </p>
+                    <BR>
+                    <div class="mb-6 text-center">
+  <a href="https://drive.google.com/file/d/1g01gnzl9Vdvl4rp8ehTECcaAEgEz-xwt/view?usp=sharing" target="_blank"
+     class="inline-block bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300">
+     <i class="fas fa-download mr-2"></i> Baixar o App do Conselho
+  </a>
+</div>
+
                 </div>
+
                  <div data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-lg font-semibold mb-4">PREFEITURA DE VIGIA DE NAZARÉ</h3>
                     <ul class="space-y-2">
@@ -421,6 +471,7 @@
             </div>
         </div>
     </footer>
+
 
     <div class="fixed bottom-6 right-6 z-50">
         <a href="https://wa.me/5591984895280" class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition duration-300 animate-shake">
