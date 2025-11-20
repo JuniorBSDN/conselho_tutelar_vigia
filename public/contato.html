@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conselho Tutelar - Serviços e Contatos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Estilos Customizados (Mantidos e Organizados) */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Animações (Mantidas) */
+        .emergency-btn { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        @keyframes pulse-custom {
+          0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6); }
+          50% { transform: scale(1.08); box-shadow: 0 0 15px 5px rgba(220, 38, 38, 0.4); }
+        }
+        .animate-pulse-custom { animation: pulse-custom 1.5s infinite; }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); } 10% { transform: rotate(-10deg); }
+            20% { transform: rotate(10deg); } 30% { transform: rotate(-10deg); }
+            40% { transform: rotate(10deg); } 50% { transform: rotate(-10deg); }
+            60% { transform: rotate(10deg); } 70% { transform: rotate(-10deg); }
+            80% { transform: rotate(10deg); } 90% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+        .animate-shake { animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite; }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-2" data-aos="fade-right">
+            <img src="https://i.imgur.com/fzWqSVu.png" alt="Logo Prefeitura Municipal de Vigia de Nazaré" class="w-48 md:w-64 lg:w-72">
+       </div>
+        <nav class="hidden md:flex space-x-8" data-aos="fade-left">
+            <a href="index.html" class="text-gray-600 hover:text-blue-600">inicio</a>
+            <a href="service.html" class="text-gray-600 hover:text-blue-600">Serviços</a>
+            <a href="apoio.html" class="text-gray-600 hover:text-blue-600">Apoio </a>
+            <a href="contato.html" class="text-gray-600 hover:text-blue-600">Contato</a>
+        </nav>
+        <button id="menu-button" class="md:hidden text-gray-600">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+        <nav class="flex flex-col items-center space-y-2">
+            <a href="index.html" class="block w-full text-center py-2 text-blue-600 font-medium hover:bg-gray-100">Início</a>
+            <a href="service.html" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Serviços</a>
+            <a href="apoio.html" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Apoio Legal</a>
+            <a href="contato.html" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero-gradient text-white py-8">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Fale com algum Conselheiro </h1>
+            <p class="text-xl mb-8">"Encontre aqui, endereço fixo e telefone de contatos  "</p>
+        </div>
+        </div>
+</section>
+
+
+<section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-arial text-center mb-12 text-blue-800" data-aos="fade-up">Contato e Localização</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-right">
+                <h3 class="text-xl font-semibold mb-6 text-blue-800">Entre em Contato</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="100">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-map-marker-alt text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Endereço</h4>
+                            <p class="text-gray-600">Tv. São Sebastião, 112 - Arapiranga<br>CEP: 68780-000 - Vigia/PA</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="200">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-phone-alt text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Telefones</h4>
+                            <p class="text-gray-600"><a href="https://wa.me/5591984895280" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">(91) 984895280 (WhatsApp)</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="300">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-envelope text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">E-mail</h4>
+                            <p class="text-gray-600">conselhotvg2020@yahoo.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="400">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-clock text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-medium text--800">Atendimento</h4>
+                            <p class="text-gray-600">Segunda a Sexta: 8h às 18h<br>Plantão 24h para emergências</p>
+                        </div>
+                    </div>
+                    <br>
+                    <a href="mapa.html"
+                       class="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Locais de Apoio
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white-50 p-8 rounded-lg shadow-sm" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d912.9349020494491!2d-48.14183019593056!3d-0.8467058750001819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwNTEnMTAuNCJTIDQ4wrAwOCczNy4xIlc!5e1!3m2!1spt-BR!2sbr!4v1756991215509!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<header class="relative bg-cover bg-center py-16 sm:py-24
+    bg-[url('https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-abuso-sexual-infantil-como-identificar-uma-possivel-vitima.jpg')]">
+
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
+        <h1 class="text-5xl font-arial text-white mb-4" data-aos="fade-up">
+             Fique atento aos<span class="text-red-400"> sinais !</span>
+        </h1>
+
+        <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+            O silêncio perpetua a injustiça. Seja a voz que combate a desigualdade na infância e adolescência.
+        </p>
+
+        <!--BOTÃO EMERGENCIA-->
+        <button
+  onclick="confirmarDenuncia()"
+  class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center
+         hover:bg-red-700 transition duration-300
+         shadow-xl shadow-red-600/50
+         animate-pulse
+         hover:scale-105 transform">
+  <i class="fas fa-exclamation-triangle mr-2"></i> Fazer Denúncia
+</button>
+
+        <p class="mt-4 text-sm text-gray-300">
+            Ou, se preferir, <a href="https://api.whatsapp.com/send?phone=5591984895280&text=Quero%20Denunciar%20um%20abuso%20contra%20uma%20criaça%20ou%20adolescente%20agora!." target="_blank" class="text-red-300 hover:text-red-500 font-medium underline">Fale conosco pelo WhatsApp.</a>
+        </p>
+
+    </div>
+</header>
+
+<script>
+  function confirmarDenuncia() {
+    const aviso = `
+⚠️ ATENÇÃO
+
+Antes de prosseguir, saiba que:
+Fazer uma denúncia falsa é CRIME previsto no Art. 340 do Código Penal Brasileiro.
+
+🚨 Denuncie apenas situações reais de violação dos direitos da criança e do adolescente.
+
+Deseja continuar e fazer sua denúncia?`;
+
+    if (confirm(aviso)) {
+      // Se o usuário confirmar, abre o link da denúncia
+      window.location.href = "https://ctvgiadenuncia.vercel.app/";
+    }
+  }
+</script>
+
+<!--RODA PÉ-->
+
+    <footer class="bg-gray-800 text-white py-12" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-semibold mb-4">CONSELHO TUTELAR DE VIGIA - INICIATIVA</h3>
+                    <p class="text-gray-300">
+                        Este site é fruto de projeto de extensão universitária, compromisso da academia
+                        com a sociedade. Em consonância com o Estatuto da Criança e do Adolescente (Lei n.º 8.069/1990),
+                        reafirmamos que a família, a sociedade e o Estado têm o dever conjunto de garantir
+                        o pleno desenvolvimento de crianças e adolescentes, combatendo desigualdades e assegurando direitos fundamentais.
+                    </p>
+                    <br>
+                    <p class="text-gray-300">
+                        ECA (Lei n.º 8.069/1990) — remete à norma que estabelece a responsabilidade
+                        compartilhada de garantir os direitos da criança e do adolescente
+                    </p>
+                    <BR>
+                    <div class="mb-6 text-center">
+                        <a href="https://drive.google.com/file/d/1jKziF855vYrtN6et3jtUPMbUMUOaLkHv/view?usp=sharing" target="_blank"
+                           class="inline-block bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300">
+                           <i class="fas fa-download mr-2"></i> Baixar o App do Conselho
+                        </a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                      <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
+                   <ul class="space-y-2">
+                        <li><a href="https://www.gov.br/mdh/pt-br/sdh" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">Ministério da Mulher, Família e Direitos Humanos</a></li>
+                        <li><a href="https://www.gov.br/mdh/pt-br/conselhos/conanda" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">Conselho Nacional dos Direitos da Criança e do Adolescente</a></li>
+                        <li><a href="http://www.planalto.gov.br/ccivil_03/leis/l8069.htm" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">Estatuto da Criança e do Adolescente</a></li>
+                    </ul>
+                </div>
+               <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-semibold mb-4">Denúncias</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300"><i class="fas fa-phone-alt mr-2"></i> Disque 100</li>
+                        <li class="text-gray-300"><i class="fas fa-globe mr-2"></i> <a href="https://www.gov.br/mdh/pt-br/disque100" class="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer">disque100.gov.br</a></li>
+                        <li class="text-gray-300"><i class="fas fa-mobile-alt mr-2"></i> Aplicativo Proteja Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Conselho Tutelar de Vigia/PA - Projeto de ensino extensionista</p>
+                <p class="mt-2 text-sm">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - fone:(91)983252639</p>
+            </div>
+        </div>
+    </footer>
+
+
+<!--CANTO INFERIOR DA TELA-->
+
+    < <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5591984895280" class="bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition duration-300 animate-shake">
+            <i class="fas fa-triangle text-2xl">Zap</i>
+        </a>
+    </div>
+
+
+   <!--SCRIPT MENU MOBILE-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa o AOS
+        AOS.init({
+            once: true
+        });
+
+        // LÓGICA CORRIGIDA PARA O MENU SANDUÍCHE (MOBILE)
+        document.getElementById('menu-button').addEventListener('click', function() {
+            // Alterna a classe 'hidden' no menu mobile
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
