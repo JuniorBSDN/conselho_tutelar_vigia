@@ -11,7 +11,7 @@
 
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #1e3a8a 20%, #3b82f6 100%);
         }
         .report-card:hover {
             transform: translateY(-5px);
@@ -56,20 +56,39 @@
         .animate-shake {
             animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
         }
+        /* Estilo do botão de denúncia na seção (Ajustado para usar cores do Tailwind) */
+        .btn-denuncia-main {
+            display: inline-flex;
+            align-items: center;
+            /* Cores ajustadas para tailwind */
+            background-color: #ef4444; /* red-500 */
+            color: #ffffff;
+            font-weight: 700;
+            padding: 12px 25px;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-denuncia-main:hover {
+            background-color: #dc2626; /* red-600 */
+            transform: translateY(-5px);
+        }
+
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <header class="bg-white shadow-md">
+
+<header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2" data-aos="fade-right">
-                <img src="https://i.imgur.com/UWfUCDl.png" alt="Logo Prefeitura Municipal de Vigia de Nazaré" class="w-70 md:w-70 lg:w-90">
-            </div>
+                <img src="https://i.imgur.com/fzWqSVu.png" alt="Logo Prefeitura Municipal de Vigia de Nazaré" class="w-80 md:w-80 lg:w-80">
+           </div>
             <nav class="hidden md:flex space-x-8" data-aos="fade-left">
-                <a href="#about" class="text-gray-600 hover:text-blue-600">Sobre</a>
-                <a href="#services" class="text-gray-600 hover:text-blue-600">Serviços</a>
-                <a href="https://ctvgiadenuncia.vercel.app/" class="text-gray-600 hover:text-blue-600">Denúncias</a>
-                <a href="#support" class="text-gray-600 hover:text-blue-600">Apoio Legal</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contato</a>
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">inicio</a>
+                <a href="service.html" class="text-gray-600 hover:text-blue-600">Serviços</a>
+                <a href="apoio.html" class="text-gray-600 hover:text-blue-600">Apoio </a>
+                <a href="contato.html" class="text-gray-600 hover:text-blue-600">Contato</a>
             </nav>
             <button id="menu-button" class="md:hidden text-gray-600">
                 <i class="fas fa-bars text-2xl"></i>
@@ -77,45 +96,37 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
             <nav class="flex flex-col items-center space-y-2">
-                <a href="#home" class="block w-full text-center py-2 text-blue-600 font-medium hover:bg-gray-100">Início</a>
-                <a href="#about" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Sobre</a>
-                <a href="#services" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Serviços</a>
-                <a href="https://ctvgiadenuncia.vercel.app/" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Denúncias</a>
-                <a href="#support" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Apoio Legal</a>
-                <a href="#contact" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Contato</a>
+                <a href="index.html" class="block w-full text-center py-2 text-blue-600 font-medium hover:bg-gray-100">Início</a>
+                <a href="service.html" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Serviços</a>
+                <a href="apoio.html" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Apoio Legal</a>
+                <a href="contato.html" class="block w-full text-center py-2 text-gray-600 hover:bg-gray-100">Contato</a>
             </nav>
         </div>
     </header>
 
-    <!--EM DESTAQUE-->
     <section id="home" class="hero-gradient text-white py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-up" data-aos-duration="1000">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">Protegendo Nossas Crianças e Adolescentes</h1>
-                <p class="text-xl mb-8">O Conselho Tutelar está aqui para garantir os direitos fundamentais de crianças e adolescentes conforme o Estatuto da Criança e do Adolescente (ECA).</p>
-
+                <p class="text-xl mb-8">"É dever do Conselho Tutelar — assim como de todo cidadão — zelar pela proteção e garantia dos direitos de crianças e adolescentes, conforme estabelece o Estatuto da Criança e do Adolescente (Lei nº 8.069/1990)."</p>
           <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-  <!-- Botão FAZER DENÚNCIA com alerta -->
   <button
     onclick="confirmarDenuncia()"
     class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition duration-300">
     <i class="fas fa-exclamation-triangle mr-2"></i> Fazer Denúncia
   </button>
 
-  <!-- Botão DISQUE 100 -->
   <a href="tel:100"
     class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-red-700 transition duration-300 animate-pulse-custom">
     <i class="fas fa-phone-alt mr-2"></i> Disque 100 (Emergência)
   </a>
 
-  <!-- Botão BAIXAR APP -->
   <a href="https://drive.google.com/file/d/1jKziF855vYrtN6et3jtUPMbUMUOaLkHv/view?usp=sharing" target="_blank"
     class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-green-700 transition duration-300">
     <i class="fas fa-mobile-alt mr-2"></i> Baixar o App
   </a>
 </div>
 
-<!-- Script do alerta -->
 <script>
   function confirmarDenuncia() {
     const aviso = `
@@ -134,288 +145,317 @@ Deseja continuar e fazer sua denúncia?`;
     }
   }
 </script>
-
-
-            </div>
-
-            <div class="md:w-1/2 flex justify-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <img src="https://www.bozano.rs.gov.br/admin/globalarq/noticia/noticia/651_366/1a50d6852ea7ee1a98596383e61f76e3.png" alt="Ilustração de proteção a crianças e adolescentes" class="w-full max-w-sm">
-            </div>
-
-        </div>
-    </section>
-
-    <!--SOBRE O CONSELHO TUTELAR-->
-
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">
-                Sobre o Conselho Tutelar
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-blue-50 p-6 rounded-lg shadow-sm transform transition duration-500 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Nossa Missão</h3>
-                    <p class="text-gray-600">Zelar pelos direitos das crianças e adolescentes, aplicando medidas de proteção quando esses direitos forem ameaçados ou violados.</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-lg shadow-sm transform transition duration-500 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-balance-scale"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Base Legal</h3>
-                    <p class="text-gray-600">Atuamos com base no Estatuto da Criança e do Adolescente (ECA - Lei 8.069/90), que estabelece direitos e deveres para proteção integral.</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-lg shadow-sm transform transition duration-500 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-users"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Composição</h3>
-                    <p class="text-gray-600">Formado por 5 membros eleitos pela comunidade para mandato de 4 anos, com atuação autônoma e independente.</p>
-                </div>
             </div>
         </div>
     </section>
 
-    <!--SERVIÇOS-->
 
-    <section id="services" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">
-                Nossos Serviços
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-home"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Acolhimento Institucional</h3>
-                    <p class="text-gray-600">Medida protetiva para crianças e adolescentes em situação de risco, oferecendo moradia temporária e acompanhamento psicossocial.</p>
+    <!--SOBRE O CTV-->
+  <section id="about" class="relative py-20 overflow-hidden
+    bg-whhite bg-cover bg-center">
+
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-sm -z-10"></div>
+
+    <div class="absolute top-0 left-0 w-60 h-60 bg-blue-200 rounded-full blur-3xl opacity-30 -z-10"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20 -z-10"></div>
+
+    <div class="container mx-auto px-4 relative z-10"> <h2 class="text-4xl font-Arial text-center mb-16 text-blue-800 tracking-tight"
+            data-aos="fade-up">
+            O Conselho Tutelar e Um Órgão de Proteção Integral
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <div class="group bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                 data-aos="zoom-in" data-aos-delay="100">
+                <div class="text-blue-600 text-5xl mb-5 transition-transform duration-500 group-hover:scale-110">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Orientação Familiar</h3>
-                    <p class="text-gray-600">Acompanhamento e orientação às famílias para fortalecimento de vínculos e superação de vulnerabilidades.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-gavel"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Encaminhamento Jurídico</h3>
-                    <p class="text-gray-600">Encaminhamento para órgãos competentes em casos que necessitem de intervenção judicial ou medidas socioeducativas.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-user-graduate"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Inclusão Educacional</h3>
-                    <p class="text-gray-600">Garantia de acesso e permanência na escola, combatendo a evasão escolar e promovendo o direito à educação.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-heartbeat"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Acesso à Saúde</h3>
-                    <p class="text-gray-600">Garantia de atendimento médico, psicológico e odontológico para crianças e adolescentes em situação de vulnerabilidade.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 report-card transform hover:scale-105" data-aos="fade-up" data-aos-delay="600">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-hands-helping"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Programas Sociais</h3>
-                    <p class="text-gray-600">Inserção em programas de transferência de renda, cursos profissionalizantes e atividades culturais e esportivas.</p>
-                </div>
+                <h3 class="text-2xl font-arial mb-4 text-gray-900">Missão Institucional</h3>
+                <p class="text-gray-700 leading-relaxed font-medium">
+                    Consiste em <strong>zelar</strong> pelo cumprimento dos direitos da criança e do adolescente.
+                    Nossa atuação se concentra em aplicar e fiscalizar medidas protetivas sempre
+                    que identificadas situações de negligência, violência, ameaça ou violação de direitos.
+                    É um dever da sociedade, garantido por Lei.
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                     >> Leia mais ! </a>
             </div>
+
+            <div class="group bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                 data-aos="zoom-in" data-aos-delay="200">
+                <div class="text-blue-600 text-5xl mb-5 transition-transform duration-500 group-hover:scale-110">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="text-2xl font-arial mb-4 text-gray-900">Fundamento Legal</h3>
+                <p class="text-gray-700 leading-relaxed font-medium">
+                    Nosso trabalho é rigidamente balizado pelo **Estatuto da Criança e do Adolescente (ECA – Lei Federal 8.069/90)**,
+                    que define o Conselho como um órgão permanente e autônomo, encarregado de garantir a Doutrina da
+                    Proteção Integral. Esta legislação é o pilar de nossa atuação.
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                     >> Leia mais ! </a>
+            </div>
+
+            <div class="group bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                 data-aos="zoom-in" data-aos-delay="300">
+                <div class="text-blue-600 text-5xl mb-5 transition-transform duration-500 group-hover:scale-110">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-2xl font-arial mb-4 text-gray-900">Estrutura e Mandato</h3>
+                <p class="text-gray-700 leading-relaxed font-medium">
+                    O colegiado é constituído por **5 membros titulares e seus respectivos suplentes**,
+                    escolhidos por voto direto e secreto da comunidade local, conforme previsto em lei.
+                    O mandato tem duração de 4 anos e a atuação é desvinculada de qualquer influência política.
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                     >> Leia mais ! </a>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <!--APOIO LEGAL-->
+<!--ESTRATEGIA-->
+    <section id="portal-strategy" class="py-20 bg-white ">
 
-    <section id="support" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Apoio Legal</h2>
-            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in">
-                <div class="md:flex">
-                    <div class="md:w-1/3 bg-blue-600 p-8 text-white flex flex-col justify-center" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="text-5xl mb-6"><i class="fas fa-balance-scale-left"></i></div>
-                        <h3 class="text-2xl font-bold mb-4">Estatuto da Criança e do Adolescente</h3>
-                        <p>Lei nº 8.069/90 que estabelece os direitos fundamentais e medidas protetivas para crianças e adolescentes.</p>
-                    </div>
-                    <div class="md:w-2/3 p-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                        <h4 class="text-xl font-semibold mb-4 text-gray-800">Principais Artigos Relevantes:</h4>
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-blue-200 pl-4" data-aos="fade-left" data-aos-delay="300">
-                                <p class="font-medium text-gray-800">Art. 5°</p>
-                                <p class="text-gray-600">Nenhuma criança ou adolescente será objeto de qualquer forma de negligência, discriminação, exploração, violência, crueldade e opressão.</p>
-                            </div>
-                            <div class="border-l-4 border-blue-200 pl-4" data-aos="fade-left" data-aos-delay="400">
-                                <p class="font-medium text-gray-800">Art. 18</p>
-                                <p class="text-gray-600">É dever de todos velar pela dignidade da criança e do adolescente, pondo-os a salvo de qualquer tratamento desumano, violento, aterrorizante, vexatório ou constrangedor.</p>
-                            </div>
-                            <div class="border-l-4 border-blue-200 pl-4" data-aos="fade-left" data-aos-delay="500">
-                                <p class="font-medium text-gray-800">Art. 70</p>
-                                <p class="text-gray-600">É dever de todos prevenir a ocorrência de ameaça ou violação dos direitos da criança e do adolescente.</p>
-                            </div>
-                            <div class="border-l-4 border-blue-200 pl-4" data-aos="fade-left" data-aos-delay="600">
-                                <p class="font-medium text-gray-800">Art. 98</p>
-                                <p class="text-gray-600">As medidas de proteção à criança e ao adolescente são aplicáveis sempre que os direitos reconhecidos nesta Lei forem ameaçados ou violados.</p>
-                            </div>
-                        </div>
-                        <div class="mt-6" data-aos="fade-up" data-aos-delay="700">
-                            <a href="http://www.planalto.gov.br/ccivil_03/leis/l8069.htm" class="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt mr-2"></i> Acesse o ECA completo
-                            </a>
-                        </div>
-                    </div>
+    <div class="container mx-auto px-4 max-w-6xl">
+
+        <h2 class="text-4xl font-Arial text-center mb-16 text-blue-800 tracking-tight" data-aos="fade-down">
+            Função estratégica do portal do Conselho Tutelar de Vigia
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <div data-aos="fade-right" data-aos-delay="100">
+                <div class="aspect-w-16 aspect-h-9 md:aspect-h-11">
+                    <img
+                        src="https://i.pinimg.com/originals/e5/6f/bc/e56fbca6d39a859621b744d5c2cef81b.png"
+                        alt="Foto de crianças felizes brincando em um campo verde, simbolizando a proteção integral."
+                        class="w-full h-full object-cover rounded-2xl shadow-xl transition duration-500 hover:shadow-2xl hover:scale-[1.01]"
+                    >
                 </div>
+                <p class="text-sm text-gray-500 mt-3 text-center">
+                    Garantindo o direito ao desenvolvimento e à proteção de nossas crianças.
+                </p>
             </div>
 
+            <div data-aos="fade-left" data-aos-delay="200">
+                <h3 class="text-3xl font-arial mb-6 text-gray-900 border-l-4 border-blue-600 pl-4">
+                    Responsabilidade Pública
+                </h3>
 
-            <!--PERGUNTAS FREQUENTES-->
-            <div class="mt-12 grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-right">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Perguntas Frequentes</h3>
-                    <div class="space-y-4">
-                        <div class="border-b pb-4" data-aos="fade-right" data-aos-delay="100">
-                            <h4 class="font-medium text-gray-800">A denúncia pode ser anônima?</h4>
-                            <p class="text-gray-600 mt-1">Sim, todas as denúncias podem ser feitas de forma anônima. Sua identidade será preservada se você desejar.</p>
-                        </div>
-                        <div class="border-b pb-4" data-aos="fade-right" data-aos-delay="200">
-                            <h4 class="font-medium text-gray-800">O que acontece após a denúncia?</h4>
-                            <p class="text-gray-600 mt-1">O Conselho Tutelar apura os fatos e toma as medidas necessárias, que podem incluir orientação, encaminhamento a serviços ou medidas protetivas.</p>
-                        </div>
-                        <div class="border-b pb-4" data-aos="fade-right" data-aos-delay="300">
-                            <h4 class="font-medium text-gray-800">Posso ser processado por denunciar?</h4>
-                            <p class="text-gray-600 mt-1">Não, desde que a denúncia seja feita de boa-fé. O artigo 18 do ECA protege quem denuncia violações de direitos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Parceiros Jurídicos</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start" data-aos="fade-left" data-aos-delay="100">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-gavel text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Defensoria Pública</h4>
-                                <p class="text-gray-600 mt-1">Atendimento jurídico gratuito para famílias em situação de vulnerabilidade.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-left" data-aos-delay="200">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-landmark text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Ministério Público</h4>
-                                <p class="text-gray-600 mt-1">Fiscaliza o cumprimento do ECA e pode acionar o judiciário quando necessário.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-left" data-aos-delay="300">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-hands-helping text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Organizações Não-Governamentais</h4>
-                                <p class="text-gray-600 mt-1">Oferecem apoio psicossocial, assistência e acompanhamento de casos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                    A função mais estratégica desta plataforma é estabelecer o cidadão como um <strong>parceiro fundamental</strong> do Conselho Tutelar. Este portal, juntamente com o aplicativo móvel, é o instrumento que materializa a <strong>corresponsabilidade social</strong> definida pelo ECA.
+                </p>
 
-    <!--CONTATOS-->
+                <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                    Ao centralizar o <strong>sistema de denúncias online</strong> (via portal e app), transformamos a passividade em <strong>ação cívica imediata</strong>. Garantimos que qualquer morador possa <strong>registrar ameaças e violações de direitos de forma ágil e segura</strong>, permitindo a intervenção do Conselho em tempo hábil.
+                </p>
 
-    <section id="emergency-contacts" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Contatos de Emergência</h2>
-            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6" data-aos="zoom-in" data-aos-duration="800">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a href="tel:190" class="block p-6 bg-red-50 border-l-4 border-red-500 rounded-lg flex items-center group" data-aos="fade-right" data-aos-delay="100">
-                        <div class="flex-shrink-0">
-                            <i class="fas fa-phone-alt text-red-600 text-3xl mr-4 transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">Polícia Militar</h4>
-                            <p class="text-sm text-gray-600">190 - Emergências</p>
-                        </div>
-                    </a>
-                    <a href="tel:192" class="block p-6 bg-blue-50 border-l-4 border-blue-500 rounded-lg flex items-center group" data-aos="fade-right" data-aos-delay="200">
-                        <div class="flex-shrink-0">
-                            <i class="fas fa-ambulance text-blue-600 text-3xl mr-4 transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">SAMU</h4>
-                            <p class="text-sm text-gray-600">192 - Atendimento Médico</p>
-                        </div>
-                    </a>
-                    <a href="tel:1921" class="block p-6 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg flex items-center group" data-aos="fade-right" data-aos-delay="300">
-                        <div class="flex-shrink-0">
-                            <i class="fas fa-user-shield text-yellow-600 text-3xl mr-4 transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">Segurança Interna</h4>
-                            <p class="text-sm text-gray-600">Ramal 1921 (24 horas)</p>
-                        </div>
-                    </a>
-                    <a href="tel:181" class="block p-6 bg-green-50 border-l-4 border-green-500 rounded-lg flex items-center group" data-aos="fade-right" data-aos-delay="400">
-                        <div class="flex-shrink-0">
-                            <i class="fas fa-headset text-green-600 text-3xl mr-4 transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">Disque Denúncia</h4>
-                            <p class="text-sm text-gray-600">181 - Denúncias Anônimas</p>
-                        </div>
+                <p class="text-gray-700 leading-relaxed text-lg font-semibold">
+                    Este é um <strong>instrumento de empoderamento cívico</strong>, que unifica a ação do poder público com a vigilância da comunidade, assegurando que o dever de zelar pelos direitos da criança e do adolescente seja cumprido de forma mais <strong>capilarizada, tecnológica e eficiente</strong>.
+                </p>
+
+                <div class="mt-6 text-center" >
+                    <a href="https://ctvgiadenuncia.vercel.app/" class="btn-denuncia-main btn-pulsar">
+                        <i class="fas fa-exclamation-triangle mr-2"></i> Click aqui para Denunciar qualquer tipo de abuso contra a criança ou adolescente !
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!--LOCALIZAÇÃO-->
+<!--PARCEIROS INSTITUCIONAIS-->
+    <section id="parceiros" class="relative py-20 overflow-hidden
+    bg-[url('https://static.vecteezy.com/ti/vetor-gratis/p1/4466306-ilustracao-fundo-azul-claro-design-branco-e-fundo-azul-design-limpo-e-moderno-design-vetor.jpg')] bg-cover bg-center">
 
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Contato e Localização</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-right">
-                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Entre em Contato</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start" data-aos="fade-right" data-aos-delay="100">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-map-marker-alt text-blue-600"></i></div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Endereço</h4>
-                                <p class="text-gray-600">Tv. São Sebastião, 112 - Arapiranga<br>CEP: 68780-000 - Vigia/PA</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-right" data-aos-delay="200">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-phone-alt text-blue-600"></i></div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Telefones</h4>
-                                <p class="text-gray-600"><a href="https://wa.me/5591984895280" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">(91) 984895280 (WhatsApp)</a></p>
-                            </div>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-right" data-aos-delay="300">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-envelope text-blue-600"></i></div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">E-mail</h4>
-                                <p class="text-gray-600">conselhotvg2020@yahoo.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-right" data-aos-delay="400">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4"><i class="fas fa-clock text-blue-600"></i></div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Atendimento</h4>
-                                <p class="text-gray-600">Segunda a Sexta: 8h às 18h<br>Plantão 24h para emergências</p>
-                            </div>
-                        </div>
-                        <br>
-                        <a href="apoio.html"
-   class="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 flex items-center justify-center">
-    <i class="fas fa-paper-plane mr-2"></i> Locais de Apoio
-</a>
-                    </div>
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-sm -z-10"></div>
+    <div class="absolute top-0 left-0 w-60 h-60 bg-blue-200 rounded-full blur-3xl opacity-30 -z-10"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20 -z-10"></div>
+
+    <div class="container mx-auto px- relative z-10 max-w-7xl">
+        <h2 class="text-4xl font-arial text-center mb-16 text-blue-800 tracking-tight" data-aos="fade-up">
+            Parceiros Essenciais na Rede de Proteção e Apoio
+        </h2>
+
+        <!--PREFEITURA-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="group bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                        data-aos="zoom-in" data-aos-delay="100">
+                <div class="flex items-center mb-4 h-16">
+                    <img src="data:image/png;base64,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" alt="Logo Prefeitura" class="h-10 w-auto object-contain mr-4 transition-transform duration-500 group-hover:scale-110">
+                <h3 class="text-xl font-bold text-blue-600">Prefeitura de Vigia de Nazaré/PA </h3>
                 </div>
 
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-left">
-                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Endereço no Mapa</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d912.9349020494491!2d-48.14183019593056!3d-0.8467058750001819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwNTEnMTAuNCJTIDQ4wrAwOCczNy4xIlc!5e1!3m2!1spt-BR!2sbr!4v1756991215509!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                <ul class="space-y-3 text-gray-700 mt-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-blue-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            End.: Rua Professora Noêmia Belém, 578, Centro
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-phone-alt text-blue-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            Fone: (91) 98467-3247
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-clock text-blue-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium font-semibold">
+                            Horário: 08:00 às 13:00
+                        </span>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
 
+            <!--ASSISTENCIA SOCIAL-->
+            <div class="group bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                 data-aos="zoom-in" data-aos-delay="200">
+
+                <div class="flex items-center mb-4 h-16">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgg1UfWQBZdmUDp0OCW6j_CHQaFG8NZm16og&s" alt="Logo SEMAS" class="h-12 w-12 object-contain mr-4 transition-transform duration-500 group-hover:scale-110">
+                    <h3 class="text-xl font-bold text-blue-600">Secretaria Municipal de Trabalho e Assistência Social</h3>
+                </div>
+
+                <ul class="space-y-3 text-gray-700 mt-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-pin text-blue-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            End: R. Padre José Bonifácio, s/n bairro Arapiranga
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-clock text-blue-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium font-semibold">
+                            Horário: 08:00 às 14:00 (Segunda a Sexta)
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-info-circle text-blue-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            Coordena a política de <strong>assistência social</strong>.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--CREAS-->
+            <div class="group bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                 data-aos="zoom-in" data-aos-delay="300">
+
+                <div class="flex items-center mb-4 h-16">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe0CAkPzHl2wiGTBBuL3RVREYbIVLIRRBewA&s" alt="Logo CREAS" class="h-12 w-12 object-contain mr-4 transition-transform duration-500 group-hover:scale-110">
+                    <h3 class="text-xl font-bold text-blue-800">Centro de Referência e Assistência Social</h3>
+                </div>
+
+                <ul class="space-y-3 text-gray-700 mt-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-pin text-blue-700 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            Santana de Medeiros, 321 - Vigia de Nazaré
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope text-blue-700 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            Email: creasvigiadenazare@gmail.com
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-clock text-blue-700 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium font-semibold">
+                            Horário: Seg a Sex, 8h às 17h
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--POLICIA MILITAR-->
+            <div class="group bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-blue-100
+                        transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400"
+                 data-aos="zoom-in" data-aos-delay="400">
+
+                <div class="flex items-center mb-4 h-16">
+                    <img src="https://dv2-service.sistemas.homologar.prodepa.pa.gov.br/pcivil-logo.png" alt="Logo Tribunal de Justiça do Pará" class="h-12 w-12 object-contain mr-4 transition-transform duration-500 group-hover:scale-110">
+                    <h3 class="text-xl font-bold text-red-700">Delegacia de Policia Civil de Vigia</h3>
+                </div>
+
+                <ul class="space-y-3 text-gray-700 mt-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-pin text-red-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            Generalissimo Deodoro, 894 - Vigia de Nazaré
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-gavel text-red-500 mr-2 flex-shrink-0 mt-1"></i>
+                        <span class="text-sm font-medium">
+                            Serviço: Emissão de <strong>Medidas Urgentes</strong>.
+                        </span>
+                    </li>
+                    <li class="flex items-start bg-red-100 p-2 rounded-lg border border-red-300">
+                        <i class="fas fa-bell text-red-700 mr-2 flex-shrink-0 mt-1 animate-pulse"></i>
+                        <span class="text-sm font-medium font-bold text-red-800">
+                            (91) 3780-1288 (Contato Fixo).
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<header class="relative bg-cover bg-center py-16 sm:py-24
+    bg-[url('https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-abuso-sexual-infantil-como-identificar-uma-possivel-vitima.jpg')]">
+
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
+        <h1 class="text-5xl font-arial text-white mb-4" data-aos="fade-up">
+             Fique atento aos<span class="text-red-400"> sinais !</span>
+        </h1>
+
+        <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+            O silêncio perpetua a injustiça. Seja a voz que combate a desigualdade na infância e adolescência.
+        </p>
+
+<!--BOTÃO EMERGENCIA-->
+        <button
+  onclick="confirmarDenuncia()"
+  class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center
+         hover:bg-red-700 transition duration-300
+         shadow-xl shadow-red-600/50
+         animate-pulse
+         hover:scale-105 transform">
+  <i class="fas fa-exclamation-triangle mr-2"></i> Fazer Denúncia
+</button>
+
+
+
+
+        <p class="mt-4 text-sm text-gray-300">
+            Ou, se preferir, <a href="https://api.whatsapp.com/send?phone=5591984895280&text=Quero%20Denunciar%20um%20abuso%20contra%20uma%20criaça%20ou%20adolescente%20agora!." target="_blank" class="text-red-300 hover:text-red-500 font-medium underline">Fale conosco pelo WhatsApp.</a>
+        </p>
+
+    </div>
+</header>
+<!--RODA PÉ-->
 
     <footer class="bg-gray-800 text-white py-12" data-aos="fade-up">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-3 gap-8">
                 <div data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-lg font-semibold mb-4">CONSELHO TUTELAR DE VIGIA - INICIATIVA</h3>
                     <p class="text-gray-300">
@@ -431,23 +471,13 @@ Deseja continuar e fazer sua denúncia?`;
                     </p>
                     <BR>
                     <div class="mb-6 text-center">
-  <a href="https://drive.google.com/file/d/1jKziF855vYrtN6et3jtUPMbUMUOaLkHv/view?usp=sharing" target="_blank"
-     class="inline-block bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300">
-     <i class="fas fa-download mr-2"></i> Baixar o App do Conselho
-  </a>
-</div>
-
+                        <a href="https://drive.google.com/file/d/1jKziF855vYrtN6et3jtUPMbUMUOaLkHv/view?usp=sharing" target="_blank"
+                           class="inline-block bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300">
+                           <i class="fas fa-download mr-2"></i> Baixar o App do Conselho
+                        </a>
+                    </div>
                 </div>
 
-                 <div data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-lg font-semibold mb-4">PREFEITURA DE VIGIA DE NAZARÉ</h3>
-                    <ul class="space-y-2">
-                        <li class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i>End. Rua Professora Noêmia Belém, nº 578, Centro, Vigia de Nazaré – PA</li>
-                        <li class="text-gray-300"><i class="fas fa-phone-alt mr-2"></i> Telefone: (91) 99221-7410</li>
-                        <li class="text-gray-300"><i class="fas fa-envelope mr-2"></i> E-mail: prefeitura@vigia.pa.gov.br</li>
-                        <li class="text-gray-300"><i class="fas fa-clock mr-2"></i> Horário de atendimento: 08h às 14h</li>
-                    </ul>
-                </div>
                 <div data-aos="fade-up" data-aos-delay="300">
                       <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
                    <ul class="space-y-2">
@@ -467,22 +497,33 @@ Deseja continuar e fazer sua denúncia?`;
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>© 2025 Conselho Tutelar de Vigia/PA - Projeto de ensino extensionista</p>
-                <p class="mt-2 text-sm">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - Estudante de Análise e Desenvolvimento de Sistemas - UNIASSENVI - fone:(91)983252639</p>
+                <p class="mt-2 text-sm">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - fone:(91)983252639</p>
             </div>
         </div>
     </footer>
 
 
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/5591984895280" class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition duration-300 animate-shake">
-            <i class="fas fa-exclamation-triangle text-2xl"></i>
+<!--CANTO INFERIOR DA TELA-->
+
+    < <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5591984895280" class="bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition duration-300 animate-shake">
+            <i class="fas fa-triangle text-2xl">Zap</i>
         </a>
     </div>
 
+
+   <!--SCRIPT MENU MOBILE-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Inicializa o AOS
         AOS.init({
             once: true
+        });
+
+        // LÓGICA CORRIGIDA PARA O MENU SANDUÍCHE (MOBILE)
+        document.getElementById('menu-button').addEventListener('click', function() {
+            // Alterna a classe 'hidden' no menu mobile
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
 </body>
