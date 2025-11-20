@@ -260,11 +260,17 @@ Deseja continuar e fazer sua denúncia?`;
                     Este é um <strong>instrumento de empoderamento cívico</strong>, que unifica a ação do poder público com a vigilância da comunidade, assegurando que o dever de zelar pelos direitos da criança e do adolescente seja cumprido de forma mais <strong>capilarizada, tecnológica e eficiente</strong>.
                 </p>
 
-                <div class="mt-6 text-center" >
-                    <a href="https://ctvgiadenuncia.vercel.app/" class="btn-denuncia-main btn-pulsar">
-                        <i class="fas fa-exclamation-triangle mr-2"></i> Click aqui para Denunciar qualquer tipo de abuso contra a criança ou adolescente !
-                    </a>
-                </div>
+                <!--BOTÃO denuncia-->
+        <button
+  onclick="confirmarDenuncia()"
+  class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center
+         hover:bg-red-700 transition duration-300
+         shadow-xl shadow-red-600/50
+         animate-pulse
+         hover:scale-105 transform">
+  <i class="fas fa-exclamation-triangle mr-2"></i> Click aqui para Denunciar qualquer tipo de abuso contra a criança ou adolescente !
+</button>
+                
             </div>
         </div>
     </div>
@@ -431,7 +437,7 @@ Deseja continuar e fazer sua denúncia?`;
             O silêncio perpetua a injustiça. Seja a voz que combate a desigualdade na infância e adolescência.
         </p>
 
-<!--BOTÃO EMERGENCIA-->
+<!--BOTÃO denuncia-->
         <button
   onclick="confirmarDenuncia()"
   class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center
